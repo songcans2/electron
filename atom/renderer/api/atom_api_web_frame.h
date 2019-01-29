@@ -59,7 +59,8 @@ class WebFrame : public mate::Wrappable<WebFrame> {
 
   // Editing.
   void InsertText(const std::string& text);
-  void InsertCSS(const std::string& css);
+  base::string16 InsertCSS(const base::string16& css);
+  void RemoveInsertedCSS(const base::string16& key);
 
   // Executing scripts.
   void ExecuteJavaScript(const base::string16& code, mate::Arguments* args);
